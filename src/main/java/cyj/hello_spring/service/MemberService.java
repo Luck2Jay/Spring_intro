@@ -9,13 +9,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+//@Service
 //회원 repository와 domain을 활용하여 작성한 비즈니스 로직인 회원 서비스
 public class MemberService {
 
     private final MemberRepostiory memberRepostiory ;
 
-    @Autowired
+  //  @Autowired
     //Constructor, 외부에서 넣어주도록
     public MemberService(MemberRepostiory memberRepostiory) {
         this.memberRepostiory = memberRepostiory;
