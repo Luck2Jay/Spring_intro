@@ -9,10 +9,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class  HelloController {
-    @GetMapping("hello")
+
+    //웹프라우저에서 localhost:8080/hello를 입력하면 get방식으로 mapping & 스프링부트 내장 톰캣 서버 띄움
+    @GetMapping("hello") // hello로 되어 있는 Controller를 찾아 메서드가 실행됨
     public String hello(Model model){
-        model.addAttribute("data","Yupoong!!"); //mvc의 m
-        return "hello";
+        model.addAttribute("data","Yupoong!!"); //mvc의 m &  메서드는 model에 addAttribute로 key가 data인 Yupoong!!을
+        return "hello"; // value에 담고 "hello"리턴
     }
 
     @GetMapping("hello-mvc")
