@@ -13,6 +13,10 @@ repositories {
 }
 
 dependencies {
+	//위는 자바가 DB를 사용하기 위해 필요한 Jdbc 드라이버를 위한 라이브러리
+	// 아래는 h2가 제공하는 DB클라이언트를 위한 라이브러리
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	runtimeOnly 'com.h2database:h2'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
