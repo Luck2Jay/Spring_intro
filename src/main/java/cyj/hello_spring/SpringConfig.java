@@ -1,5 +1,6 @@
 package cyj.hello_spring;
 
+import cyj.hello_spring.aop.TimeTraceAop;
 import cyj.hello_spring.repository.*;
 import cyj.hello_spring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,11 @@ public class SpringConfig {
     }
 
 
-
+//    @Bean
+//    public TimeTraceAop timeTraceAop(){
+//
+//        return new TimeTraceAop();
+//    }
 
  @Bean
     public MemberService memberService() {

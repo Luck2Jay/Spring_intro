@@ -32,12 +32,10 @@ public class MemberService {
 //            throw new IllegalStateException("이미 존재하는 회원입니다.");
 //        });
         //중복회원 검증 메서드
-        validateDuplicateMember(member);
-
-        // 검증된 객체 저장소에 저장
-        memberRepostiory.save(member);
-        return member.getId();
-
+            validateDuplicateMember(member);
+            memberRepostiory.save(member);
+            return member.getId();
+               // 검증된 객체 저장소에 저장
     }
 
     private void validateDuplicateMember(Member member) {
@@ -49,7 +47,9 @@ public class MemberService {
 
     //전체 회원 조회
     public List<Member> findMembers(){
-        return memberRepostiory.findAll();
+
+           return memberRepostiory.findAll();
+
     }
     //id로 회원 조회
     public Optional<Member> findOne(Long memberID){
